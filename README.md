@@ -27,6 +27,4 @@ Logistic Regression (L.R.)
 SMOTE Analysis
 
 ## Conclusion
-The analysis indicates that Account Number, PostEntry Mode, and Merchant Name are key features strongly associated with fraudulent or suspicious transaction behavior. Notably, Account 380680241 and Account 882815134 exhibit unusually high numbers of reversed transactions—907 and 384, respectively—warranting further investigation into their reversal patterns over time (e.g., weekly or daily frequency).
-
-Additionally, merchants such as Lyft (692 reversals), Uber (689), Alibaba.com (499), and eBay.com (491)—representing ride-sharing, e-commerce, and online trading platforms—show the highest volume of transaction reversals. These findings suggest a need for closer monitoring of transactions involving these platforms, particularly given their frequent use and susceptibility to potential abuse.
+Account Number, PostEntry Mode, and Merchant Name emerge as key indicators of potential fraud. Accounts 380680241 and 882815134 show unusually high reversal counts (907 and 384), indicating the need for closer review of their transaction timelines. High reversal volumes from merchants like Lyft (692), Uber (689), Alibaba.com (499), and eBay.com (491)—primarily in e-commerce and ride-sharing—highlight platforms requiring enhanced monitoring due to elevated risk.
