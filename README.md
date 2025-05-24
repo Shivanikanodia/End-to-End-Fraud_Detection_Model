@@ -26,9 +26,7 @@ Random Forest
 Logistic Regression (L.R.)
 SMOTE Analysis
 
-## Future Work
-
-There are many ways to improve the model, such as using it on different datasets with various sizes and data types or by changing the data splitting ratio and viewing it from a different algorithm perspective. An example can be merging telecom datato calculate the location of people to have better knowledge of the location of the card owner while his/her credit card is being used; this will ease the detection because if the card owner is in Dubai and a transaction of his card was made in Abu Dhabi, it will easily be detected as Fraud.
-
 ## Conclusion
-Implement automated flags for accounts with high reversal frequencies within a specified time window and prioritize these accounts for manual review or additional identity verification steps. Also, Analyze transaction patterns, frequency, and timing for flagged accounts to detect anomalies.
+The analysis indicates that Account Number, PostEntry Mode, and Merchant Name are key features strongly associated with fraudulent or suspicious transaction behavior. Notably, Account 380680241 and Account 882815134 exhibit unusually high numbers of reversed transactions—907 and 384, respectively—warranting further investigation into their reversal patterns over time (e.g., weekly or daily frequency).
+
+Additionally, merchants such as Lyft (692 reversals), Uber (689), Alibaba.com (499), and eBay.com (491)—representing ride-sharing, e-commerce, and online trading platforms—show the highest volume of transaction reversals. These findings suggest a need for closer monitoring of transactions involving these platforms, particularly given their frequent use and susceptibility to potential abuse.
