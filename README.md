@@ -1,30 +1,98 @@
-# Credit Card Fraud Detection System
+💳 Credit Card Fraud Detection System
 
-## Objective
-Credit card fraud is a significant problem, with billions of dollars lost each year. Machine learning can be used to detect credit card fraud by identifying patterns that are indicative of fraudulent transactions. Credit card fraud refers to the physical loss of a credit card or the loss of sensitive credit card information .This project proposes to develop a machine-learning model to detect credit card fraud. The model will be trained on a dataset of historical credit card transactions and evaluated on a holdout dataset of unseen transactions.
+📌 Overview
 
-## Goal of the Project:
+Credit card fraud results in billions of dollars in losses each year. This project leverages machine learning to detect fraudulent transactions by identifying behavioral patterns and anomalies in historical credit card data. The model is designed to flag suspicious activity in near real-time, helping financial institutions reduce fraud risk and protect customers.
 
-The goal of this project is to build a predictive model to determine whether a given transaction will be fraudulent or not. Also, analyze reversed and multi-swipe transactions to identify patterns, outliers, and significant trends across merchants and account numbers over time, as it is essential to figure out the fraudulent transactions so that customers do not get charged for the purchase of products that they did not buy.
+🎯 Business Problem
 
-## Data Source
+Fraudulent transactions lead to:
 
-The dataset was retrieved from an open-source website, Kaggle.com. It contains data on transactions made in 2013 by European credit card users in two days only. Transaction dataset has total of 786363 entries, with total of 29 coulmns.
+Direct financial losses through chargebacks
+Customer dissatisfaction and loss of trust
+Compliance and regulatory challenges
+The goal is to develop a robust predictive model that:
 
-The key steps involved in the file are:
-1. Exploratory data analysis
-2. Data Visualization
-3. Model Developement
-4. Performance metrics and model evaluation
-5. Summary and recommendation
+Accurately identifies fraudulent transactions
+Minimizes false positives (avoiding unnecessary transaction blocks)
+Provides insights into high-risk accounts, merchants, and behaviors
+🧠 Project Goals
 
-Dataset: kaggle Dataset
+Build a classification model to detect fraudulent transactions.
+Analyze transaction patterns, reversals, and multi-swipes to uncover suspicious activity.
+Visualize trends across merchants, accounts, and time.
+Ensure model interpretability and handle class imbalance.
+📂 Dataset
 
-## Algorithm
+Source: Kaggle – Credit Card Fraud Detection
+Timeframe: Two days of credit card transactions by European users (2013)
+Size: 786,363 transactions
+Features:
+Time: Seconds since the first transaction
+Amount: Transaction amount
+V1–V28: PCA-anonymized numerical features
+Class: 0 = Legitimate, 1 = Fraudulent
+⚠️ Note: All features are anonymized and numeric, which limits domain-level interpretability.
+📈 Workflow
 
-Random Forest
-Logistic Regression (L.R.)
-SMOTE Analysis
+Exploratory Data Analysis (EDA)
+Distribution of transaction amounts and times
+Reversal and multi-swipe analysis
+Fraud frequency by merchant and account
+Data Preprocessing
+Handling missing values
+Standardization of Amount
+Addressing severe class imbalance using SMOTE
+Model Development
+Logistic Regression (baseline model)
+Random Forest Classifier (handles non-linearity and feature importance)
+Class balancing with SMOTE
+Evaluation Metrics
+Precision: Minimize false positives
+Recall: Maximize detection of fraudulent cases
+F1-Score: Balance precision and recall
+ROC-AUC: Threshold-independent model performance
+⚙️ Algorithms Used
 
-## Conclusion
-Account Number, PostEntry Mode, and Merchant Name emerge as key indicators of potential fraud. Accounts 380680241 and 882815134 show unusually high reversal counts (907 and 384), indicating the need for closer review of their transaction timelines. High reversal volumes from merchants like Lyft (692), Uber (689), Alibaba.com (499), and eBay.com (491)—primarily in e-commerce and ride-sharing—highlight platforms requiring enhanced monitoring due to elevated risk.
+Model	Why Chosen
+Logistic Regression	Simple, interpretable baseline
+Random Forest	Handles complex feature interactions, robust to overfitting
+SMOTE	Mitigates extreme class imbalance (~0.17% fraud cases)
+📊 Key Insights
+
+High-Risk Accounts: Accounts 380680241 and 882815134 had excessive reversal activity (907 and 384 respectively).
+Suspicious Merchants: Lyft, Uber, Alibaba, and eBay showed disproportionately high reversal counts.
+Pattern Detection: Multi-swipe and reversed transactions often preceded fraudulent labels, suggesting a behavioral sequence.
+📉 Limitations
+
+Aspect	Limitation
+Time Window	Only 2 days of data; not representative of seasonality or long-term trends
+Anonymization	PCA-transformed features limit interpretability and domain-based feature engineering
+Class Imbalance	<0.2% of transactions are fraudulent — requires synthetic sampling
+Lack of Categorical Data	No transaction type, location, device, or channel data
+🚀 Business Impact
+
+By identifying fraud patterns across accounts and merchants:
+
+Institutions can proactively flag high-risk behaviors
+Customers are protected from unauthorized charges
+Fraud detection accuracy improvements of even 1–2% can save millions annually
+📁 Folder Structure
+
+├── data/                   # Raw and processed datasets
+├── notebooks/              # EDA and model-building notebooks
+├── models/                 # Trained model files
+├── src/                    # Source code for training, preprocessing, etc.
+├── visuals/                # Charts, graphs, and EDA results
+├── README.md               # Project overview and documentation
+✅ Next Steps
+
+Integrate temporal features (time since last transaction, transaction velocity)
+Add explainability using SHAP values or LIME
+Test with real-time streaming data (e.g., Kafka + Spark)
+Explore ensemble methods like XGBoost or LightGBM for better accuracy
+👨‍💻 Tech Stack
+
+Python (pandas, scikit-learn, imbalanced-learn, matplotlib, seaborn)
+Jupyter Notebooks
+Git + GitHub
