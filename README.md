@@ -15,42 +15,32 @@ Credit card fraud can result in significant financial damage.  The objective is 
 ## Dataset: 
 
 - **Source**: Kaggle – Credit Card Fraud Detection Dataset. 
-- **Records**: 786,363 transactions
-- **Features**: 28 anonymized numerical features and target label `Class` (0 = legit, 1 = fraud)
+- **Records**: **786,363** transactions
+- **Features**: **28 features** and target label `Class` (0 = legit, 1 = fraud)
 
  ----
 
 1. #### DATA PREPROCESING:
    
-- Used isnull() function to check missing values and there was no missing values present across all records.
-- Used nunique() to check unique values present in the dataset.
+- Used **isnull().sum()** function to check missing values and there was no missing values present across all records.
+- Used **nunique()** to check unique values present in the dataset.
      
-Insights: CurrentBalance, TransactionDatetime and Available_Money has highest unique values b/w (10,0000 - 14,0000). 
-Followed by transaction_amount with approx 40,000 unique values. Lastly, Merchant_Name with 2300 and CardLast4digits with 1225 unique values. 
+**Insights:** **CurrentBalance, TransactionDatetime and Available_Money has highest unique values b/w (10,0000 - 14,0000).** 
+Followed by transaction_amount with approx **40,000 unique values.** Lastly, **Merchant_Name with 2300 and CardLast4digits with 1225 unique values.** 
      
-- Checked Data Quality and accuracy, whitespaces & empty strings. 
+- Checked Data Quality and if there are any whitespaces & empty strings present in dataset.  
 
 **Insights:** (Dropped coulmns  - 'echoBuffer', 'merchantCity', 'merchantState','merchantZip', 'posOnPremises', 'posConditionCode',  'recurringAuthInd' which were empty strings). 
 
-- Performed **Statastical testing** using **A/B Testing (Chi-Square and ANOVA )** for feature importance and validation. It tells us whether the association between a feature and the target is likely due to chance or not. A low p-value indicates that the relationship is statistically significant and not random.
+- Performed **Statastical testing** using **A/B Testing (Chi-Square and ANOVA)** for feature importance and validation. It tells us whether the association between a feature and the target is likely due to chance or not. A low p-value indicates that the relationship is statistically significant and not random.
 
-**Insights:**  *Columns such as PosEntryMode, CurrentExpDate, TransactionType, AcqCountry, and MerchantCountryCode exhibit low Chi-Square statistics and high p-values, indicating a lack of statistical significance in distinguishing between fraudulent and non-fraudulent transactions. As a result, these features can be safely excluded from further analysis.*
-
-- **Fraud rates for numerical features,** Calculated the average fraud rate for each category within these variables and their thresolds.
-
-- This means you’re only looking at the top X% of values for that feature and the proportion of fraudulent transactions within that slice of the data. So, essentially we are testing: “If we only focus on the higher values of this feature, does fraud happen more often or less often?" 
-
-For **credit limit,** fraud rate is mostly flat around 1.3–1.5%, regardless of the threshold. This suggests credit limit doesn’t strongly influence fraud likelihood. Fraud is spread evenly across both low and high credit limits.
-
-Fraud rate decreases slightly as **available money** increases, with 10% threshold  we see 1.52% fraud rate and with 90% threshold we see 1.21% fraud rate. People with lower available money balances show slightly higher fraud rates.
-
-**Fraud rate increases steadily as transaction amounts get larger, with 10% threshold, we see 1.6% fraud rate and with 90% threshold we see 3.4% fraud rate. There is strong upward trend: Higher-value transactions are much more likely to be fraudulent.**
-
-These results can be potentially because of imbalance dataset and could lead to bias results, we cannot solely rely on these findings without using SMOTE or class weightage techniques. 
+**Insights:**  Columns such as **PosEntryMode, CurrentExpDate, TransactionType, AcqCountry, and MerchantCountryCode** shows low Chi-Square statistics and high p-values, indicating a lack of statistical significance in distinguishing between fraudulent and non-fraudulent transactions. As a result, these features can be safely excluded from further analysis.
 
 ---
 
 - #### FRAUD RATE FOR CURRENT_BALANCE, TRANSACTION_AMOUNT, AVAILABLE_MONEY AND CREDIT_LIMIT:**
+
+Calculated the average fraud rate for each category within these variables and their thresolds.
 
 <img width="693" height="415" alt="Screenshot 2025-09-13 at 01 37 38" src="https://github.com/user-attachments/assets/6f62c563-9e88-4cdf-b515-948adf525d4d" />
 
@@ -60,15 +50,15 @@ These results can be potentially because of imbalance dataset and could lead to 
 
   <img width="681" height="430" alt="Screenshot 2025-09-13 at 01 38 01" src="https://github.com/user-attachments/assets/45359274-bbc7-4905-b0ad-27c37ddbca26" />
 
-Above charts shows that there is strong positive correlation between Transaction Amount and fraud rate, **1.71% → 3.37%** as amount increases. With an increase of transaction amount, there is an increase in fraud rate, indicating with higher amounts chances of fraud is higher. 
+This means you’re only looking at the top X% of values for that feature and the proportion of fraudulent transactions within that slice of the data. So, essentially we are testing: “If we only focus on the higher values of this feature, does fraud happen more often or less often?" 
 
-Also, 
+For **Credit Limit,** fraud rate is mostly flat around **1.3–1.5%,** regardless of the threshold. This suggests credit limit doesn’t strongly influence fraud likelihood. Fraud is spread evenly across both low and high credit limits.
 
-Based on fraud rate trends, I chose to retain features like transactionAmount and creditLimit because they show strong signals for fraud. AvailableMoney and currentBalance are kept for potential interaction effects.
+Fraud rate decreases slightly as **Available Money** increases, with **10% threshold**  we see **1.52% fraud rate** and with **80 threshold** we see **1.21% fraud Rate.** People with lower available money balances show slightly higher fraud rates.
 
-Lets visualization all of these using graphs, where we analyzed fraud rates across thresholds for numerical features (creditLimit, availableMoney, transactionAmount, currentBalance).
+*Fraud rate increases steadily as transaction amounts get larger, with **10% threshold,** we see **1.6% fraud rate** and with **90% threshold** we see **3.4% fraud rate.** There is strong upward trend: Higher-value transactions are much more likely to be fraudulent.*
 
-Found a strong positive correlation between transactionAmount and fraud rate, indicating higher transaction values are more likely to be fraudulent. creditLimit and availableMoney showed less clear relationships.
+These results can be potentially because of imbalance dataset and could lead to bias results, we cannot solely rely on these findings without using SMOTE or class weightage techniques.
 
 ----
 
@@ -76,6 +66,8 @@ Found a strong positive correlation between transactionAmount and fraud rate, in
 
 Lets understand transaction patterns, reversed transactions & multiswipe transactions, and merchant behavior using data visualization. 
 
+Number of reversed_transactions  3345
+Total value of reversed_transactions $466263.25
 
 
    
