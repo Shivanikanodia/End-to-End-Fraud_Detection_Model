@@ -1,12 +1,16 @@
-### Credit Card Fraud Detection System
+## Credit Card Fraud Detection System: 
 
 ###  Overview: 
 
 This project builds a machine learning model to detect fraudulent credit card transactions using historical data. Fraud detection is critical for minimizing financial loss and protecting customer trust.
 
+----
+
 ## Business Problem: 
 
 Credit card fraud can result in significant financial damage.  The objective is to flag fraudulent transactions accurately while minimizing false negatives and enabling banks to act quickly and efficiently, minimizing loss. 
+
+----
 
 ## Dataset: 
 
@@ -34,7 +38,13 @@ Followed by transaction_amount with approx 40,000 unique values. Lastly, Merchan
 
 - **Fraud rates for numerical features,** Calculated the average fraud rate for each category within these variables and their thresolds.
 
-**IN & OUT** and **American airlines** seems to have high fraud rate. Followed by, **Airline and rideshare** has significant high fraud rate of  **3.4%** followed by **online_retail,online_gifts and furniture with 2.4%**.
+- This means you’re only looking at the top X% of values for that feature and the proportion of fraudulent transactions within that slice of the data. So, essentially we are testing: “If we only focus on the higher values of this feature, does fraud happen more often or less often?" 
+
+For **credit limit,** fraud rate is mostly flat around 1.3–1.5%, regardless of the threshold. This suggests credit limit doesn’t strongly influence fraud likelihood. Fraud is spread evenly across both low and high credit limits.
+
+Fraud rate decreases slightly as **available money** increases, with 10% threshold  we see 1.52% fraud rate and with 90% threshold we see 1.21% fraud rate. People with lower available money balances show slightly higher fraud rates.
+
+**Fraud rate increases steadily as transaction amounts get larger, with 10% threshold, we see 1.6% fraud rate and with 90% threshold we see 3.4% fraud rate. There is strong upward trend: Higher-value transactions are much more likely to be fraudulent.**
 
 These results can be potentially because of imbalance dataset and could lead to bias results, we cannot solely rely on these findings without using SMOTE or class weightage techniques. 
 
@@ -50,9 +60,19 @@ These results can be potentially because of imbalance dataset and could lead to 
 
   <img width="681" height="430" alt="Screenshot 2025-09-13 at 01 38 01" src="https://github.com/user-attachments/assets/45359274-bbc7-4905-b0ad-27c37ddbca26" />
 
+Above charts shows that there is strong positive correlation between Transaction Amount and fraud rate, **1.71% → 3.37%** as amount increases. With an increase of transaction amount, there is an increase in fraud rate, indicating with higher amounts chances of fraud is higher. 
+
+Also, 
+
+Based on fraud rate trends, I chose to retain features like transactionAmount and creditLimit because they show strong signals for fraud. AvailableMoney and currentBalance are kept for potential interaction effects.
+
+Lets visualization all of these using graphs, where we analyzed fraud rates across thresholds for numerical features (creditLimit, availableMoney, transactionAmount, currentBalance).
+
+Found a strong positive correlation between transactionAmount and fraud rate, indicating higher transaction values are more likely to be fraudulent. creditLimit and availableMoney showed less clear relationships.
+
 ----
 
-#### Data Visualization:
+### Data Visualization:
 
 Lets understand transaction patterns, reversed transactions & multiswipe transactions, and merchant behavior using data visualization. 
 
