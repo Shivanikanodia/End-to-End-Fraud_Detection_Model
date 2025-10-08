@@ -82,7 +82,7 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 
 
-### Data Transformation using Coulmn transfoer and Pipeline. 
+### Data Transformation using Coulmn transformer and Pipeline. 
 
 
 <img width="1234" height="906" alt="image" src="https://github.com/user-attachments/assets/d3687817-566d-4d29-94bf-b4a1e58a0c6e" />
@@ -90,9 +90,9 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 -----
 
-## Model Developement and Evaluation: 
+## Model Development and Evaluation: 
 
-### 1.Results from Logistic Regression with a tuned Thresold:
+### 1.Results from Logistic Regression with tuned Thresold:
 
 
 <img width="655" height="633" alt="Screenshot 2025-10-07 at 17 11 34" src="https://github.com/user-attachments/assets/9c1b155b-50f3-4dec-bbd4-cf6119ea356a" />
@@ -107,7 +107,7 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 ------
 
 
-### Which models to Deploy in Production: 
+### Which Models to Deploy in Production: 
 
 XGBoost performs best for this problem, primarily because it achieves the lowest number of false negatives, which aligns with our business goal of minimizing missed fraudulent transactions.
 
@@ -123,7 +123,7 @@ Hence, XGBoost is the optimal choice — it effectively minimizes false negative
 
 ### TOP PREDICTORS OF FRAUD:
 
-**Merchants and peak hours to Watch out:**
+**Merchants and Peak Hours to Watch out:**
 
 Fresh Flowers, Uber, Lyft, Ebay.com, Sears consistently appeared in list where Fraud transaction volume, fraud rate and fraud counts were high. This evidented from the temporal analysis where hours like 12:00 AM, 06:Q0 AM and 03:00 PM were targeted and these specific merchants showed fraudulent activity indicating low monitoring hours or weak verification system.
 
