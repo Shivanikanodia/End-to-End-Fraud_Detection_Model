@@ -37,7 +37,9 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 **Top Merchants detected based on Fraud Rate, Fraud Amount, Fraud Count and Temporal trends:**.
 
 
+
 <img width="665" height="371" alt="Screenshot 2025-10-07 at 17 07 36" src="https://github.com/user-attachments/assets/e3d67dc7-7891-4113-816f-4e6ef2d62669" />
+
 
 
 
@@ -45,7 +47,9 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 
 
+
 <img width="723" height="355" alt="Screenshot 2025-10-07 at 17 07 51" src="https://github.com/user-attachments/assets/8cde7064-916e-4aa5-99db-56fb1c58f79a" />
+
 
 
 
@@ -53,26 +57,29 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 
 
+
 <img width="656" height="118" alt="Screenshot 2025-10-07 at 17 08 16" src="https://github.com/user-attachments/assets/c9415778-6ad3-4cde-bfa4-16ed5cf3e44c" />
 
------
-
-### Feature Engineering:
-
-
-<img width="957" height="630" alt="Screenshot 2025-10-07 at 17 05 53" src="https://github.com/user-attachments/assets/9846a1c8-f6b1-4eb7-ad24-e4551d7285bb" />
-
-
-
-<img width="1320" height="324" alt="image" src="https://github.com/user-attachments/assets/4a72641e-b71f-4749-ac45-528fc6bde1b3" />
-
 
 -----
+
+## Feature Engineering:
+
+
+1. <img width="957" height="630" alt="Screenshot 2025-10-07 at 17 05 53" src="https://github.com/user-attachments/assets/9846a1c8-f6b1-4eb7-ad24-e4551d7285bb" />
+
+
+
+
+2. <img width="1320" height="324" alt="image" src="https://github.com/user-attachments/assets/4a72641e-b71f-4749-ac45-528fc6bde1b3" />
+
 
 <img width="610" height="120" alt="Screenshot 2025-10-07 at 17 06 54" src="https://github.com/user-attachments/assets/ab5053e9-4cdb-446d-9417-00a87fcf3a16" />
 
 
------
+
+### 3. Data Transformation using Coulmn transfoer and Pipeline. 
+
 
 <img width="1234" height="906" alt="image" src="https://github.com/user-attachments/assets/d3687817-566d-4d29-94bf-b4a1e58a0c6e" />
 
@@ -81,13 +88,13 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 ## Model Developement and Evaluation: 
 
-### Results from Logistic Regression with a tuned Thresold:
+### 1.Results from Logistic Regression with a tuned Thresold:
 
 
 <img width="655" height="633" alt="Screenshot 2025-10-07 at 17 11 34" src="https://github.com/user-attachments/assets/9c1b155b-50f3-4dec-bbd4-cf6119ea356a" />
 
 
-### Results from Xgboost:*
+### 2.Results from Xgboost:*
 
 
 <img width="658" height="743" alt="Screenshot 2025-10-07 at 17 08 46" src="https://github.com/user-attachments/assets/4ab63ff0-8596-429e-8c6c-368186d8fd31" />
@@ -108,9 +115,9 @@ As a rollback option, Logistic Regression with a 0.5 threshold can serve as a ba
 
 Hence, XGBoost is the optimal choice — it effectively minimizes false negatives (the most costly error type) while keeping false positives within an acceptable range, offering a strong balance between business risk and user experience.
 
+-----
 
 ### TOP PREDICTORS OF FRAUD:
-
 
 **Merchants and thresold to Watch out:**
 
