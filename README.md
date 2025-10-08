@@ -20,7 +20,7 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 <img width="664" height="607" alt="Screenshot 2025-10-07 at 17 17 45" src="https://github.com/user-attachments/assets/7b37e9d7-cc4f-4df0-832a-d7200e420ebf" />
 
 
-**1.Skewness and Outliers in Dataset:**
+**Skewness and Outliers in Dataset:**
 
 
 <img width="477" height="578" alt="Screenshot 2025-10-07 at 17 06 19" src="https://github.com/user-attachments/assets/1338cc30-6e7d-44b8-8d0b-38855e264222" />
@@ -31,27 +31,28 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 ---
 
-### Data Visualisation - exploratroy Data Analysis: 
+## Data Visualisation - exploratroy Data Analysis: 
 
 
 **Top Merchants detected based on Fraud Rate, Fraud Amount, Fraud Count and Temporal trends:**.
 
-
+### Top 10 Merchants by FRAUD RATE:
 
 <img width="665" height="371" alt="Screenshot 2025-10-07 at 17 07 36" src="https://github.com/user-attachments/assets/e3d67dc7-7891-4113-816f-4e6ef2d62669" />
 
-
+### TOP 10 Merchants by FRAUD AMOUNT:
 
 
 <img width="667" height="353" alt="Screenshot 2025-10-07 at 17 07 46" src="https://github.com/user-attachments/assets/3853b6e8-1a54-4920-9cf3-9e26a7ed8a18" />
 
 
+### TOP 10 MERCHANTS BY FRAUD COUNT:
 
 
 <img width="723" height="355" alt="Screenshot 2025-10-07 at 17 07 51" src="https://github.com/user-attachments/assets/8cde7064-916e-4aa5-99db-56fb1c58f79a" />
 
 
-
+### PEAK HOURS WHERE FRAUD OCCURENCE IS HIGHEST: 
 
 <img width="520" height="409" alt="Screenshot 2025-10-07 at 17 07 59" src="https://github.com/user-attachments/assets/1df3cc98-c25f-4c4a-b9c2-026f1deb73ff" />
 
@@ -66,19 +67,19 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 ## Feature Engineering:
 
 
-1. <img width="957" height="630" alt="Screenshot 2025-10-07 at 17 05 53" src="https://github.com/user-attachments/assets/9846a1c8-f6b1-4eb7-ad24-e4551d7285bb" />
+ <img width="957" height="630" alt="Screenshot 2025-10-07 at 17 05 53" src="https://github.com/user-attachments/assets/9846a1c8-f6b1-4eb7-ad24-e4551d7285bb" />
 
 
 
-
-2. <img width="1320" height="324" alt="image" src="https://github.com/user-attachments/assets/4a72641e-b71f-4749-ac45-528fc6bde1b3" />
+ <img width="1320" height="324" alt="image" src="https://github.com/user-attachments/assets/4a72641e-b71f-4749-ac45-528fc6bde1b3" />
+ 
 
 
 <img width="610" height="120" alt="Screenshot 2025-10-07 at 17 06 54" src="https://github.com/user-attachments/assets/ab5053e9-4cdb-446d-9417-00a87fcf3a16" />
 
 
 
-### 3. Data Transformation using Coulmn transfoer and Pipeline. 
+### Data Transformation using Coulmn transfoer and Pipeline. 
 
 
 <img width="1234" height="906" alt="image" src="https://github.com/user-attachments/assets/d3687817-566d-4d29-94bf-b4a1e58a0c6e" />
