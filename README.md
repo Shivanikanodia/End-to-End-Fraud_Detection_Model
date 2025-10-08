@@ -125,6 +125,6 @@ Hence, XGBoost is the optimal choice — it effectively minimizes false negative
 
 **Merchants and peak hours to Watch out:**
 
-Fresh Floewers, Uber, Lyft, Ebay.com, Sears consistentl appeared in list where Fraud transaction volume, fraud rate and fraud counts was high. This evidented from the temporal analysis where hours liek 12:00 AM, 06:Q0 AM and 03:00 PM were targeted and these specific merchants showed fraudulent activity indicating low monitoring hours or weak verification system.
+Fresh Flowers, Uber, Lyft, Ebay.com, Sears consistently appeared in list where Fraud transaction volume, fraud rate and fraud counts were high. This evidented from the temporal analysis where hours like 12:00 AM, 06:Q0 AM and 03:00 PM were targeted and these specific merchants showed fraudulent activity indicating low monitoring hours or weak verification system.
 
-Walmart, Alibaba, Target and Fresh e cards and small merchants grouped as others also showed small number of transaction volume as fradulent indicating gift card attacks or bot testing.
+Walmart, Alibaba, Target and small merchants grouped as others also showed small number of transaction volume as fradulent indicating gift card attacks or bot testing.
