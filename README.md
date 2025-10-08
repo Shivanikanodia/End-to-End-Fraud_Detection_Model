@@ -58,11 +58,8 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 
 
-
-<img width="656" height="118" alt="Screenshot 2025-10-07 at 17 08 16" src="https://github.com/user-attachments/assets/c9415778-6ad3-4cde-bfa4-16ed5cf3e44c" />
-
-
 -----
+
 
 ## Feature Engineering:
 
