@@ -31,7 +31,7 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 ---
 
-## Data Visualisation - exploratroy Data Analysis: 
+## Data Visualisation - EDA: 
 
 
 **Top Merchants detected based on Fraud Rate, Fraud Amount, Fraud Count and Temporal trends:**.
@@ -71,11 +71,14 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 
 
+
  <img width="1320" height="324" alt="image" src="https://github.com/user-attachments/assets/4a72641e-b71f-4749-ac45-528fc6bde1b3" />
  
 
 
+
 <img width="610" height="120" alt="Screenshot 2025-10-07 at 17 06 54" src="https://github.com/user-attachments/assets/ab5053e9-4cdb-446d-9417-00a87fcf3a16" />
+
 
 
 
@@ -95,7 +98,7 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 <img width="655" height="633" alt="Screenshot 2025-10-07 at 17 11 34" src="https://github.com/user-attachments/assets/9c1b155b-50f3-4dec-bbd4-cf6119ea356a" />
 
 
-### 2.Results from Xgboost:*
+### 2.Results from Xgboost:
 
 
 <img width="658" height="743" alt="Screenshot 2025-10-07 at 17 08 46" src="https://github.com/user-attachments/assets/4ab63ff0-8596-429e-8c6c-368186d8fd31" />
@@ -120,7 +123,7 @@ Hence, XGBoost is the optimal choice — it effectively minimizes false negative
 
 ### TOP PREDICTORS OF FRAUD:
 
-**Merchants and thresold to Watch out:**
+**Merchants and peak hours to Watch out:**
 
 Fresh Floewers, Uber, Lyft, Ebay.com, Sears consistentl appeared in list where Fraud transaction volume, fraud rate and fraud counts was high. This evidented from the temporal analysis where hours liek 12:00 AM, 06:Q0 AM and 03:00 PM were targeted and these specific merchants showed fraudulent activity indicating low monitoring hours or weak verification system.
 
