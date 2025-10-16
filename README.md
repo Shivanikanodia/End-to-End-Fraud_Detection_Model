@@ -6,7 +6,7 @@
 
 The objective of this project is to build a predictive model that classifies whether a given transaction is fraudulent or legitimate. Detecting fraudulent transactions is critical in the financial and banking sectors to minimize monetary losses, protect customers, and maintain trust.
 
-#### Business Goal:
+### Business Goal:
 
 Maximize fraud detection accuracy (high recall) while maintaining a low false positive rate (balanced precision-recall trade-off).
 
@@ -14,13 +14,16 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 ---- 
 
 
-### Data Preparation and Missing Values:
+## Data Preparation and Missing Values:
+
+The dataset was first checked for missing values using the isnull().sum() method.
+Additionally, some columns contained empty strings or whitespace characters instead of actual null values. Regular expressions (Regex) were used to detect and handle such columns appropriately.
 
 
 <img width="664" height="607" alt="Screenshot 2025-10-07 at 17 17 45" src="https://github.com/user-attachments/assets/7b37e9d7-cc4f-4df0-832a-d7200e420ebf" />
 
 
-**Skewness and Outliers in Dataset:**
+#### Skewness and Outliers in Dataset:**
 
 
 <img width="477" height="578" alt="Screenshot 2025-10-07 at 17 06 19" src="https://github.com/user-attachments/assets/1338cc30-6e7d-44b8-8d0b-38855e264222" />
@@ -29,10 +32,11 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 <img width="488" height="531" alt="Screenshot 2025-10-07 at 17 06 27" src="https://github.com/user-attachments/assets/88bdd595-a414-42e4-a152-369c3a203112" />
 
+Above Graph shows that the variables - Current Amount, Transaction Amount, Available Money are rightly skewed and we will apply log1p transformation which will help us in removing skewness and make data ditribution normal.  
+
 ---
 
 ## Data Visualisation - EDA: 
-
 
 **Top Merchants detected based on Fraud Rate, Fraud Amount, Fraud Count and Temporal trends:**.
 
@@ -40,10 +44,16 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 <img width="665" height="371" alt="Screenshot 2025-10-07 at 17 07 36" src="https://github.com/user-attachments/assets/e3d67dc7-7891-4113-816f-4e6ef2d62669" />
 
+
+
 ### TOP 10 Merchants by FRAUD AMOUNT:
 
 
 <img width="667" height="353" alt="Screenshot 2025-10-07 at 17 07 46" src="https://github.com/user-attachments/assets/3853b6e8-1a54-4920-9cf3-9e26a7ed8a18" />
+
+Analysed transaction amount by merchant amd overall fraud across major brands. **Freshflowers, Ebay and Walmart** has high fraud loss (5-8%) compared to Ride Share & Retail Merchant. **(120K AND 80K)** 
+
+Coounterinituive, uUber and Lyft had low fraud rate - 2-3%. 
 
 
 ### TOP 10 MERCHANTS BY FRAUD COUNT:
@@ -52,10 +62,13 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 <img width="723" height="355" alt="Screenshot 2025-10-07 at 17 07 51" src="https://github.com/user-attachments/assets/8cde7064-916e-4aa5-99db-56fb1c58f79a" />
 
 
+
+
 ### PEAK HOURS WHERE FRAUD OCCURENCE IS HIGHEST: 
 
 <img width="520" height="409" alt="Screenshot 2025-10-07 at 17 07 59" src="https://github.com/user-attachments/assets/1df3cc98-c25f-4c4a-b9c2-026f1deb73ff" />
 
+We groupped merchant name and transaction hours to see when and where fraud is highest. Also, how fraud varies by day and merchant. Fraud Amounts were high between 0-3 AM for merchants like UBER, LYFT AND WALMART, indicating off hour vulnerabilities in ecommerce and transportation platform. Implementing high alerts sensitivity duing 0-3 AM can reduce fraud activity. 
 
 
 -----
@@ -84,6 +97,7 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 <img width="1234" height="906" alt="image" src="https://github.com/user-attachments/assets/d3687817-566d-4d29-94bf-b4a1e58a0c6e" />
 
+I've created a pipleine for preprocessing and handling class imbalance. I used coulmn Transformer inside pipeline for seperate preprocessing of numerical, categorical, Log-transformed and binary features and avoid data leakage. 
 
 -----
 
