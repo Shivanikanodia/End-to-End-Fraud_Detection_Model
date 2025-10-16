@@ -133,4 +133,8 @@ As a rollback option, Logistic Regression with a 0.5 threshold can serve as a ba
 
 Fresh Flowers, Uber, Lyft, Ebay.com, Walmart and Sears consistently appeared in list where Fraud transaction volume and  fraud counts were high. This evidented from the temporal analysis where hours like 12:00 AM, 01:Q0 AM and 03:00 AM were targeted mostly and these specific merchants showed fraudulent activity indicating low monitoring hours or weak verification system.
 
-Walmart, Alibaba, Target and small merchants grouped as others also showed small number of transaction volume as fradulent indicating gift card attacks or bot testing.
+### FUTURE WORK:
+
+For future work, I’d deploy the model using FastAPI or Flask and manage it through MLflow or AWS SageMaker for versioning and scaling.
+I’d set up model monitoring with tools like EvidentlyAI or WhyLabs to track drift, precision, and recall over time.
+For explainability, I’d use SHAP or LIME to show key drivers behind each fraud prediction, improving transparency for business teams. 
