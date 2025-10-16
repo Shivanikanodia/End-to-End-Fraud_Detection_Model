@@ -103,13 +103,17 @@ I've created a pipleine for preprocessing and handling class imbalance. I used c
 ### 1.Results from Logistic Regression with tuned Thresold:
 
 
-<img width="655" height="633" alt="Screenshot 2025-10-07 at 17 11 34" src="https://github.com/user-attachments/assets/9c1b155b-50f3-4dec-bbd4-cf6119ea356a" />
+<img width="1153" height="626" alt="Screenshot 2025-10-15 at 21 57 20" src="https://github.com/user-attachments/assets/7dc38094-f7da-4634-949c-0f1ed629e7c7" />
+
+
 
 
 ### 2.Results from Xgboost:
 
 
-<img width="658" height="743" alt="Screenshot 2025-10-07 at 17 08 46" src="https://github.com/user-attachments/assets/4ab63ff0-8596-429e-8c6c-368186d8fd31" />
+<img width="943" height="265" alt="Screenshot 2025-10-15 at 21 57 31" src="https://github.com/user-attachments/assets/8dbc205f-aa77-4e4a-87ac-83ffe13c92df" />
+
+<img width="655" height="456" alt="Screenshot 2025-10-15 at 21 57 47" src="https://github.com/user-attachments/assets/ef9cb7a7-6324-4565-9122-b5ea9d2cc9f7" />
 
 
 ------
