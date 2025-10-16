@@ -16,10 +16,11 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 ## Data Preparation and Missing Values:
 
-The dataset had 7 lakh rows and 28 features, with mixed data type. We received it in JSON format and processed it using JSONlines library. 
-
-The dataset was checked for missing values using the isnull().sum() function.
-Additionally, some columns contained empty strings and whitespace characters instead of actual null values, regular expressions (Regex) were used to detect and handle such columns appropriately.
+- The dataset had 7 lakh rows and 28 features, with mixed data type. We received it in JSON format and processed it using JSONlines library. 
+- The dataset was checked for missing values using the isnull().sum() function.
+- Additionally, some columns contained empty strings and whitespace characters instead of actual null values, regular expressions (Regex) were used to detect and handle such columns appropriately. i.e EcoBuffer, 'posOnPremises', 'posConditionCode'. 
+- Used nunique function in python to detect unique value distribution and category diversity. It provides information on feature variability and useless coulmns. i.e Merchant_city, Merchant_State, Merchant_zip with only one unique values were dropped. 
+- Used pd.to_datetime to convert datetime coulmn stored as string into date object (Transactiondatetime, AcountOpenDate, ExpiryDate) 
 
 
 <img width="664" height="607" alt="Screenshot 2025-10-07 at 17 17 45" src="https://github.com/user-attachments/assets/7b37e9d7-cc4f-4df0-832a-d7200e420ebf" />
@@ -27,6 +28,7 @@ Additionally, some columns contained empty strings and whitespace characters ins
 
 #### Skewness and Outliers in Dataset:
 
+For numerical data distribution, it is important to understand if they are skewed, calculated skewness and visualized using KDE and histrograms to check skewness. 
 
 <img width="477" height="578" alt="Screenshot 2025-10-07 at 17 06 19" src="https://github.com/user-attachments/assets/1338cc30-6e7d-44b8-8d0b-38855e264222" />
 
@@ -34,7 +36,7 @@ Additionally, some columns contained empty strings and whitespace characters ins
 
 <img width="488" height="531" alt="Screenshot 2025-10-07 at 17 06 27" src="https://github.com/user-attachments/assets/88bdd595-a414-42e4-a152-369c3a203112" />
 
-Above Graph shows that the variables - Current Amount, Transaction Amount, Available Money are rightly skewed and we will apply log1p transformation which will help us in removing skewness and make data ditribution normal.  
+Current Amount, Transaction Amount and  Available Money are rightly skewed with few high value transactions and we will apply log1p transformation which will help us in removing skewness as extreme outliers can disort with model part. 
 
 ---
 
