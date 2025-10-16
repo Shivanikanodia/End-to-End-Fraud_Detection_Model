@@ -16,8 +16,10 @@ Maximize fraud detection accuracy (high recall) while maintaining a low false po
 
 ## Data Preparation and Missing Values:
 
-The dataset was first checked for missing values using the isnull().sum() method.
-Additionally, some columns contained empty strings or whitespace characters instead of actual null values. Regular expressions (Regex) were used to detect and handle such columns appropriately.
+The dataset had 7 lakh rows and 28 features, with mixed data type. We received it in JSON format and processed it using JSONlines library. 
+
+The dataset was checked for missing values using the isnull().sum() function.
+Additionally, some columns contained empty strings and whitespace characters instead of actual null values, regular expressions (Regex) were used to detect and handle such columns appropriately.
 
 
 <img width="664" height="607" alt="Screenshot 2025-10-07 at 17 17 45" src="https://github.com/user-attachments/assets/7b37e9d7-cc4f-4df0-832a-d7200e420ebf" />
