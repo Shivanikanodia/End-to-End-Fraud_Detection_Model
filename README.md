@@ -46,29 +46,26 @@ Above Graph shows that the variables - Current Amount, Transaction Amount, Avail
 
 
 
-### TOP 10 Merchants by FRAUD AMOUNT:
+
+### TOP 10 Merchants by FRAUD AMOUNT AND FRAUD COUNT:
 
 
 <img width="667" height="353" alt="Screenshot 2025-10-07 at 17 07 46" src="https://github.com/user-attachments/assets/3853b6e8-1a54-4920-9cf3-9e26a7ed8a18" />
+
+
+
+<img width="723" height="355" alt="Screenshot 2025-10-07 at 17 07 51" src="https://github.com/user-attachments/assets/8cde7064-916e-4aa5-99db-56fb1c58f79a" />
 
 Analysed transaction amount by merchant amd overall fraud across major brands. **Freshflowers, Ebay and Walmart** has high fraud loss (5-8%) compared to Ride Share & Retail Merchant. **(120K AND 80K)** 
 
 Coounterinituive, uUber and Lyft had low fraud rate - 2-3%. 
 
 
-### TOP 10 MERCHANTS BY FRAUD COUNT:
-
-
-<img width="723" height="355" alt="Screenshot 2025-10-07 at 17 07 51" src="https://github.com/user-attachments/assets/8cde7064-916e-4aa5-99db-56fb1c58f79a" />
-
-
-
-
 ### PEAK HOURS WHERE FRAUD OCCURENCE IS HIGHEST: 
 
 <img width="520" height="409" alt="Screenshot 2025-10-07 at 17 07 59" src="https://github.com/user-attachments/assets/1df3cc98-c25f-4c4a-b9c2-026f1deb73ff" />
 
-We groupped merchant name and transaction hours to see when and where fraud is highest. Also, how fraud varies by day and merchant. Fraud Amounts were high between 0-3 AM for merchants like UBER, LYFT AND WALMART, indicating off hour vulnerabilities in ecommerce and transportation platform. Implementing high alerts sensitivity duing 0-3 AM can reduce fraud activity. 
+We grouped merchant name and transaction hours to see when and where fraud is highest. Also, how fraud varies by day and merchant. Fraud Amounts were high between 0-3 AM for merchants like UBER, LYFT AND WALMART, indicating off hour vulnerabilities in ecommerce and transportation platform. Implementing high alerts sensitivity duing 0-3 AM can reduce fraud activity. 
 
 
 -----
@@ -128,14 +125,12 @@ Additionally, XGBoost’s ability to handle non-linear relationships, missing va
 
 As a rollback option, Logistic Regression with a 0.5 threshold can serve as a backup model. Although it achieves slightly fewer false negatives, it results in over 11,000 false positives, which could cause unnecessary alerts and damage customer trust.
 
-Hence, XGBoost is the optimal choice — it effectively minimizes false negatives (the most costly error type) while keeping false positives within an acceptable range, offering a strong balance between business risk and user experience.
-
 -----
 
 ### TOP PREDICTORS OF FRAUD:
 
 **Merchants and Peak Hours to Watch out:**
 
-Fresh Flowers, Uber, Lyft, Ebay.com, Sears consistently appeared in list where Fraud transaction volume, fraud rate and fraud counts were high. This evidented from the temporal analysis where hours like 12:00 AM, 06:Q0 AM and 03:00 PM were targeted and these specific merchants showed fraudulent activity indicating low monitoring hours or weak verification system.
+Fresh Flowers, Uber, Lyft, Ebay.com, Walmart and Sears consistently appeared in list where Fraud transaction volume and  fraud counts were high. This evidented from the temporal analysis where hours like 12:00 AM, 01:Q0 AM and 03:00 AM were targeted mostly and these specific merchants showed fraudulent activity indicating low monitoring hours or weak verification system.
 
 Walmart, Alibaba, Target and small merchants grouped as others also showed small number of transaction volume as fradulent indicating gift card attacks or bot testing.
