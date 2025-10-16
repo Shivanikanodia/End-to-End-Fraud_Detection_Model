@@ -123,11 +123,11 @@ I've created a pipleine for preprocessing and handling class imbalance. I used c
 
 XGBoost performs best for this problem, primarily because it achieves the lowest number of false negatives, which aligns with our business goal of minimizing missed fraudulent transactions.
 
-Missing a fraudulent transaction (false negative) can lead to substantial financial losses. Therefore, maximizing recall — the proportion of actual frauds correctly identified — is critical. XGBoost successfully maximizes recall while still maintaining a reasonable balance with precision, with around 900 false positives, which is an acceptable trade-off for improved fraud detection.
+Missing a fraudulent transaction (false negative) can lead to substantial financial losses. Therefore, maximizing recall (0.69) — the proportion of actual frauds correctly identified — is critical. XGBoost successfully maximizes recall while still maintaining a reasonable balance with precision (0.4) for 1 class. 
 
 Additionally, XGBoost’s ability to handle non-linear relationships, missing values, and class imbalance makes it a strong candidate for production deployment. Its performance consistency and scalability also make it suitable for real-time predictions in fraud detection systems.
 
-As a rollback option, Logistic Regression with a 0.5 threshold can serve as a backup model. Although it achieves slightly fewer false negatives, it results in over 11,000 false positives, which could cause unnecessary alerts and damage customer trust.
+As a rollback option, Logistic Regression with a 0.4 threshold can serve as a backup model. Although it achieves slightly higher false positives, which could cause unnecessary alerts and damage customer trust.
 
 -----
 
