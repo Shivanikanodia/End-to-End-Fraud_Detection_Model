@@ -1,4 +1,4 @@
-
+-
 
 ## Identifying Fraudulent Transactions:
 
@@ -41,6 +41,11 @@ Current Amount, Transaction Amount and  Available Money are rightly skewed with 
 ---
 
 ## Data Visualisation - EDA: 
+
+Distribution of Transaction volume. 
+
+<img width="838" height="673" alt="Screenshot 2025-10-16 at 10 08 53" src="https://github.com/user-attachments/assets/db7533c5-af1f-446e-a2f2-e9fe69e150c3" />
+
 
 **Top Merchants detected based on Fraud Rate, Fraud Amount, Fraud Count and Temporal trends:**.
 
