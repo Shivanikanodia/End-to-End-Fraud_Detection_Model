@@ -93,7 +93,7 @@ We grouped merchant name and transaction hours to see when and where fraud is hi
 
 <img width="1234" height="906" alt="image" src="https://github.com/user-attachments/assets/d3687817-566d-4d29-94bf-b4a1e58a0c6e" />
 
-I've created a pipleine for preprocessing, imputation, scaling and handling class imbalance. I used coulmn transformer inside pipeline for seperate preprocessing of numerical, categorical, Log-transformed and binary features and to avoid data leakage. 
+I've created a pipeline for preprocessing, imputation, scaling and handling class imbalance. I used coulmn transformer inside pipeline for seperate preprocessing of numerical, categorical, Log-transformed and binary features and to avoid data leakage. 
 
 -----
 
