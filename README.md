@@ -46,31 +46,26 @@ Current Amount, Transaction Amount and  Available Money are rightly skewed with 
 
 ### Top 10 Merchants by FRAUD RATE:
 
-<img width="665" height="371" alt="Screenshot 2025-10-07 at 17 07 36" src="https://github.com/user-attachments/assets/e3d67dc7-7891-4113-816f-4e6ef2d62669" />
 
+<img width="833" height="453" alt="Screenshot 2025-10-16 at 10 08 05" src="https://github.com/user-attachments/assets/511e2a0f-c948-427c-85b4-f28eb06e407f" />
 
+IN AND OUT Showed high fraud rate  even at moderate transaction volume indicating vulnerabiities at specific outlet. 
 
 
 ### TOP 10 Merchants by FRAUD AMOUNT AND FRAUD COUNT:
 
+<img width="778" height="448" alt="Screenshot 2025-10-16 at 10 08 10" src="https://github.com/user-attachments/assets/d63cb34a-8498-44eb-be4e-19dbddde1dfc" />
 
-<img width="667" height="353" alt="Screenshot 2025-10-07 at 17 07 46" src="https://github.com/user-attachments/assets/3853b6e8-1a54-4920-9cf3-9e26a7ed8a18" />
+<img width="766" height="460" alt="Screenshot 2025-10-16 at 10 08 16" src="https://github.com/user-attachments/assets/9ff0b5a3-d19e-4bff-bb76-222d30cd3278" />
 
-
-
-<img width="723" height="355" alt="Screenshot 2025-10-07 at 17 07 51" src="https://github.com/user-attachments/assets/8cde7064-916e-4aa5-99db-56fb1c58f79a" />
-
-Analysed transaction amount by merchant amd overall fraud across major brands. **Freshflowers, Ebay and Walmart** has high fraud loss (5-8%) compared to Ride Share & Retail Merchant. **(120K AND 80K)** 
-
-Coounterinituive, uUber and Lyft had low fraud rate - 2-3%. 
-
+Analysed transaction amount and fraud count by merchant. **Uber, Lyft, Walmart, Target, Sears and Amazon** consistently appreared with loss amount of **(10k to 35k)** with fraud rate 2-5%, indicating fraudsters may target major brands with high transaction volume and large traffic. 
 
 ### PEAK HOURS WHERE FRAUD OCCURENCE IS HIGHEST: 
 
-<img width="520" height="409" alt="Screenshot 2025-10-07 at 17 07 59" src="https://github.com/user-attachments/assets/1df3cc98-c25f-4c4a-b9c2-026f1deb73ff" />
+<img width="696" height="550" alt="Screenshot 2025-10-16 at 10 08 23" src="https://github.com/user-attachments/assets/ef50db38-68ed-418b-91da-20c023984ff8" />
 
-We grouped merchant name and transaction hours to see when and where fraud is highest. Also, how fraud varies by day and merchant. Fraud Amounts were high between 0-3 AM for merchants like UBER, LYFT AND WALMART, indicating off hour vulnerabilities in ecommerce and transportation platform. Implementing high alerts sensitivity duing 0-3 AM can reduce fraud activity. 
 
+We grouped merchant name and transaction hours to see when and where fraud is highest. Also, how fraud varies by time and merchant. Fraud Amounts were high between 0-6 AM for merchants like UBER, LYFT AND WALMART, has loss amount of (20k-35k) indicating off hour vulnerabilities in ecommerce and transportation platform. 
 
 -----
 
