@@ -94,7 +94,7 @@ We grouped merchant name and transaction hours to see when and where fraud is hi
 
 <img width="1234" height="906" alt="image" src="https://github.com/user-attachments/assets/d3687817-566d-4d29-94bf-b4a1e58a0c6e" />
 
-I've created a pipleine for preprocessing and handling class imbalance. I used coulmn Transformer inside pipeline for seperate preprocessing of numerical, categorical, Log-transformed and binary features and avoid data leakage. 
+I've created a pipleine for preprocessing, imputation, scaling and handling class imbalance. I used coulmn transformer inside pipeline for seperate preprocessing of numerical, categorical, Log-transformed and binary features and to avoid data leakage. 
 
 -----
 
@@ -103,10 +103,15 @@ I've created a pipleine for preprocessing and handling class imbalance. I used c
 ### 1.Results from Logistic Regression with tuned Thresold:
 
 
-<img width="1153" height="626" alt="Screenshot 2025-10-15 at 21 57 20" src="https://github.com/user-attachments/assets/7dc38094-f7da-4634-949c-0f1ed629e7c7" />
+<img width="792" height="648" alt="Screenshot 2025-10-16 at 09 20 09" src="https://github.com/user-attachments/assets/d8011189-e647-465b-a82f-65d5c0604bf8" />
 
+The sklearn pipeline has encapsulated coulmn transformer, SMOTE to handle class imbalance, by creating synthetic samples of minority class and Logistic Regression serves as the final classifier with max_iter=1000 for convergence. 
 
+Raw Input data is trained and transformed during training and prediction.
 
+Stored perforrmance metrics from log model like classfication report, confusion matrix and AUC ROC Score. With recall of 70% and precision of 0.03, model did a good job caputring most of the fraudulent transaction i.e minimizing false negative and mazimizing Recall. While high number of false positives (>8000) were detected at thresold of 0.5, its less riskier then missing an actual fraudulent transaction. 
+
+Decreasing thresold a little 0.4, decreased false negative, but hurted precision which can lead to false alarms. 
 
 ### 2.Results from Xgboost:
 
@@ -114,6 +119,10 @@ I've created a pipleine for preprocessing and handling class imbalance. I used c
 <img width="943" height="265" alt="Screenshot 2025-10-15 at 21 57 31" src="https://github.com/user-attachments/assets/8dbc205f-aa77-4e4a-87ac-83ffe13c92df" />
 
 <img width="655" height="456" alt="Screenshot 2025-10-15 at 21 57 47" src="https://github.com/user-attachments/assets/ef9cb7a7-6324-4565-9122-b5ea9d2cc9f7" />
+
+XGBoost performed notably better than the Logistic Regression model due to its ability to capture non-linear relationships and complex feature interactions that linear models cannot. It achieved an increase in precision by 0.04 and a recall of 0.69, indicating a balanced trade-off between identifying true positives and minimizing false positives.
+
+The model effectively reduced false positives to 6,000 and false negatives to 121, showing that it can accurately detect positive cases while keeping misclassifications low. Overall, XGBoost delivered a strong balance between predictive accuracy and generalization, making it well-suited for this classification task.. 
 
 
 ------
@@ -123,11 +132,11 @@ I've created a pipleine for preprocessing and handling class imbalance. I used c
 
 XGBoost performs best for this problem, primarily because it achieves the lowest number of false negatives, which aligns with our business goal of minimizing missed fraudulent transactions.
 
-Missing a fraudulent transaction (false negative) can lead to substantial financial losses. Therefore, maximizing recall (0.69) — the proportion of actual frauds correctly identified — is critical. XGBoost successfully maximizes recall while still maintaining a reasonable balance with precision (0.4) for 1 class. 
+Missing a fraudulent transaction (false negative) can lead to substantial financial losses. Therefore, maximizing recall (0.69) — the proportion of actual frauds correctly identified — is critical. XGBoost successfully maximizes recall while still maintaining a reasonable balance with precision (0.4) for class 1. 
 
 Additionally, XGBoost’s ability to handle non-linear relationships, missing values, and class imbalance makes it a strong candidate for production deployment. Its performance consistency and scalability also make it suitable for real-time predictions in fraud detection systems.
 
-As a rollback option, Logistic Regression with a 0.4 threshold can serve as a backup model. Although it achieves slightly higher false positives, which could cause unnecessary alerts and damage customer trust.
+As a rollback option, Logistic Regression with a 0.5 threshold can serve as a backup model. Although it achieves slightly higher false positives, which could cause unnecessary alerts and damage customer trust.
 
 -----
 
