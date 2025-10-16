@@ -111,11 +111,11 @@ I've created a pipeline for preprocessing, imputation, normalization and handlin
 
 The sklearn logisitc pipeline has encapsulated coulmn transformer, SMOTE to handle class imbalance, by creating synthetic samples of minority class and Logistic Regression serves as the final classifier with max_iter=1000 for convergence. 
 
-Raw input data is trained and transformed during training and prediction. Pipline allow training on raw data X_train, y_train and testing on X_test and y_test. 
+Raw input data is trained and transformed during training and prediction. Pipeline allow training on raw data X_train, y_train and testing on X_test and y_test. 
 
-Stored perforrmance metrics from log model like classfication report, confusion matrix and AUC ROC Score. With recall of 70% and precision of 0.03, model did a good job caputring most of the fraudulent transaction i.e minimizing false negative and mazimizing Recall. While high number of false positives (>8000) were detected at thresold of 0.5, its less riskier then missing an actual fraudulent transaction. 
+Stored performance metrics from log model like classfication report, confusion matrix and AUC ROC Score. With recall of 70% and precision of 0.03, model did a good job capturing 70% of the fraudulent transaction i.e minimizing false negative and mazimizing Recall. While high number of false positives (>8000) were detected at thresold of 0.5, its less riskier then missing an actual fraudulent transaction. 
 
-Decreasing thresold a little 0.4, decreased false negative, but hurted precision which can lead to false alarms. 
+Decreasing thresold a little 0.4, decreased false negative, but increase false positives with high number which can lead to false alarms. 
 
 ### 2.Results from Xgboost:
 
@@ -124,9 +124,9 @@ Decreasing thresold a little 0.4, decreased false negative, but hurted precision
 
 <img width="655" height="456" alt="Screenshot 2025-10-15 at 21 57 47" src="https://github.com/user-attachments/assets/ef9cb7a7-6324-4565-9122-b5ea9d2cc9f7" />
 
-Impleneted XGboost classifer using same preprocesssing pipeline using hyper paramters like n_estimators, max_depth, col_sample, Sub_sample, Scale_pos_weight. (Scale_pos_weight: provides ratio of majority class to minority by penalizing misclassification of fraud cases more heavily. 
+Implemented XGboost classifer using same preprocesssing pipeline using hyper paramters like n_estimators, max_depth, col_sample, Sub_sample, Scale_pos_weight. (Scale_pos_weight: provides ratio of majority class to minority by penalizing misclassification of fraud cases more heavily. 
 
-XGBoost performed notably better than the Logistic Regression model due to its ability to capture non-linear relationships and complex feature interactions that linear models somestime fail to capture . It achieved an increase in precision by 0.04 and a recall of 0.69, indicating a balanced trade-off between identifying true positives and minimizing false positives.
+XGBoost performed notably better than the Logistic Regression model due to its ability to capture non-linear relationships and complex feature interactions that linear models somestime fail to capture . It achieved an increase in precision by 0.04 and a recall of 0.69, indicating a balanced trade-off between identifying true positives and minimizing false negatives.
 
 The model effectively reduced false positives to 6,000 and false negatives were 121, showing that it can accurately detect positive cases while keeping misclassifications low. Overall, XGBoost delivered a strong balance between predictive accuracy and generalization, making it well-suited for this classification task.
 
