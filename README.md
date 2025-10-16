@@ -23,7 +23,7 @@ Additionally, some columns contained empty strings or whitespace characters inst
 <img width="664" height="607" alt="Screenshot 2025-10-07 at 17 17 45" src="https://github.com/user-attachments/assets/7b37e9d7-cc4f-4df0-832a-d7200e420ebf" />
 
 
-#### Skewness and Outliers in Dataset:**
+#### Skewness and Outliers in Dataset:
 
 
 <img width="477" height="578" alt="Screenshot 2025-10-07 at 17 06 19" src="https://github.com/user-attachments/assets/1338cc30-6e7d-44b8-8d0b-38855e264222" />
