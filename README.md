@@ -132,6 +132,20 @@ The model effectively reduced false positives to 6,000 and false negatives were 
 
 ------
 
+### SHAP for feature contribution towards prediction:
+
+This plot ranks features by their average absolute SHAP value, which means:
+
+<img width="1582" height="1180" alt="output" src="https://github.com/user-attachments/assets/2d81c4b4-3e62-4ff0-92a0-76a67f63a65b" />
+
+The most influential feature — high transaction amounts push predictions strongly toward fraud. Smaller, routine amounts push the score toward non-fraud.
+
+A valid CVV reduces fraud likelihood. A CVV mismatch adds strong positive SHAP values, meaning it increases fraud probability.
+
+When the merchant’s country doesn’t match the card’s acquirer country, the model flags higher fraud risk (cross-border / unusual merchant behavior).
+
+Transactions occurring at night add positive SHAP contributions, indicating higher likelihood of fraud compared to daytime transactions.
+
 
 ### Which Models to Deploy in Production: 
 
